@@ -1,4 +1,4 @@
-# DevOps Interview Assignment: AWS EKS, Terraform, Kubernetes, and ArgoCD
+# DevOps Assignment: AWS EKS, Terraform, Kubernetes, and ArgoCD
 
 This repository contains a complete AWS DevOps assignment solution. It provisions an EKS cluster using Terraform, stores Terraform state in S3 with DynamoDB locking, deploys an NGINX application with Kubernetes manifests, and manages the application through ArgoCD.
 
@@ -75,7 +75,7 @@ Use:
 AWS Access Key ID: your-access-key
 AWS Secret Access Key: your-secret-key
 Default region name: ap-south-1
-Default output format: json
+Default output format:
 ```
 
 Verify AWS access:
@@ -89,7 +89,7 @@ aws sts get-caller-identity
 Open `argocd/application.yaml` and update the GitHub repository URL:
 
 ```yaml
-repoURL: https://github.com/YOUR_GITHUB_USERNAME/devops-eks-argocd-assignment.git
+repoURL: https://github.com/deepakkine/devops-eks-argocd-assignment.git
 ```
 
 Replace it with your actual repository URL.
@@ -121,10 +121,9 @@ terraform init
 terraform fmt
 terraform validate
 terraform plan
-terraform apply
+terraform apply # or use
+terraform apply --auto-approve
 ```
-
-Type `yes` when Terraform asks for confirmation.
 
 This creates:
 
@@ -204,9 +203,9 @@ Create the EKS infrastructure:
 
 ```bash
 terraform apply
+# or use
+terraform apply --auto-approve
 ```
-
-Type `yes` when Terraform asks for confirmation.
 
 This provisions:
 
@@ -255,13 +254,13 @@ kubectl get svc -n nginx-demo
 Access NGINX using port-forward:
 
 ```bash
-kubectl port-forward svc/nginx -n nginx-demo 8080:80
+kubectl port-forward svc/nginx -n nginx-demo 8082:80
 ```
 
 Open in browser:
 
 ```text
-http://localhost:8080
+http://localhost:8082
 ```
 
 Expected result: the default NGINX welcome page should load.
@@ -373,7 +372,7 @@ nslookup nginx.example.com
 curl http://nginx.example.com
 ```
 
-## Useful Verification Commands
+## Commands Used during Assignment
 
 Terraform backend:
 
