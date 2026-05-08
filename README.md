@@ -445,6 +445,44 @@ Include screenshots or terminal output for:
 - ArgoCD UI at `https://localhost:8081`
 - `kubectl get applications -n argocd`
 
+## Project Screenshots / Evidence
+
+- The following screenshots provide execution evidence for the AWS infrastructure, Terraform backend, Kubernetes deployment, NGINX access, and ArgoCD GitOps synchronization.
+
+## Screenshot 1: AWS EKS cluster is active
+
+![alt text](image.png)
+
+## Screenshot 2: VPC created for the EKS cluster
+
+![alt text](image-1.png)
+
+## Screenshot 3: Terraform remote state stored in S3
+
+![alt text](image-2.png)
+
+## Screenshot 4: DynamoDB table created for Terraform state locking
+
+![alt text](image-3.png)
+
+## Screenshot 5: EKS worker node running on EC2
+
+![alt text](image-4.png)
+
+## Screenshot 6: NGINX application accessible through localhost port-forward
+
+![alt text](image-5.png)
+
+## Screenshot 7: ArgoCD application synced and healthy
+
+![alt text](image-6.png)
+
+## Screenshot 8: Terminal verification: EKS node, NGINX pod, and ArgoCD Application
+
+![alt text](image-7.png)
+
+ `Screenshots were captured from the AWS Console, browser access endpoints, and kubectl terminal output during assignment execution.`
+
 ## Cost Note
 
 This assignment creates billable AWS resources, including the EKS control plane, NAT Gateway, S3, and EC2 worker nodes. The worker node type is set to `t3.small` because `t3.micro` has a very low EKS pod limit and may not schedule application pods after Kubernetes system pods are running. Run `terraform destroy` after completing the assignment to avoid ongoing charges.
