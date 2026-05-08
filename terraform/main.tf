@@ -54,7 +54,7 @@ module "eks" {
 
   eks_managed_node_groups = {
     default = {
-      name           = "${var.cluster_name}-nodes"
+      name           = "workers"
       instance_types = var.node_instance_types
 
       min_size     = var.node_min_size
