@@ -31,7 +31,7 @@ variable "vpc_cidr" {
 variable "node_instance_types" {
   description = "EC2 instance types for the managed node group."
   type        = list(string)
-  default     = ["t3.medium"]
+  default     = ["t3.micro"]
 }
 
 variable "node_min_size" {
@@ -43,7 +43,7 @@ variable "node_min_size" {
 variable "node_desired_size" {
   description = "Desired number of worker nodes."
   type        = number
-  default     = 2
+  default     = 1
 }
 
 variable "node_max_size" {
