@@ -337,6 +337,14 @@ kubectl get all -n nginx-demo
 
 ArgoCD should sync the NGINX manifests from GitHub and keep the application in the desired state.
 
+If the cluster uses a very small worker node, keep optional ArgoCD components scaled down to avoid pod scheduling limits:
+
+```bash
+kubectl scale deployment argocd-dex-server -n argocd --replicas=0
+kubectl scale deployment argocd-notifications-controller -n argocd --replicas=0
+kubectl scale deployment argocd-applicationset-controller -n argocd --replicas=0
+```
+
 ## Optional Bonus: Ingress and DNS
 
 The repository includes a sample Ingress manifest:
