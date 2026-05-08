@@ -175,7 +175,7 @@ aws_region          = "ap-south-1"
 cluster_name        = "devops-assignment-eks"
 environment         = "assignment"
 cluster_version     = "1.34"
-node_instance_types = ["t3.micro"]
+node_instance_types = ["t3.small"]
 node_min_size       = 1
 node_desired_size   = 1
 node_max_size       = 3
@@ -439,4 +439,4 @@ Include screenshots or terminal output for:
 
 ## Cost Note
 
-This assignment creates billable AWS resources, including the EKS control plane, NAT Gateway, S3, and possibly EC2 worker nodes depending on free-tier eligibility. The worker node type is set to `t3.micro` to reduce cost, but AWS free tier depends on your account, region, and usage. Run `terraform destroy` after completing the assignment to avoid ongoing charges.
+This assignment creates billable AWS resources, including the EKS control plane, NAT Gateway, S3, and EC2 worker nodes. The worker node type is set to `t3.small` because `t3.micro` has a very low EKS pod limit and may not schedule application pods after Kubernetes system pods are running. Run `terraform destroy` after completing the assignment to avoid ongoing charges.
