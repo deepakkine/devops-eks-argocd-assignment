@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/devops-eks-argocd-assignment.git
+    repoURL: https://github.com/deepakkine/devops-eks-argocd-assignment.git
     targetRevision: main
     path: manifests
   destination:
