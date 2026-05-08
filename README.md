@@ -441,7 +441,7 @@ Include screenshots or terminal output for:
 - `terraform apply` completed successfully
 - `kubectl get nodes`
 - `kubectl get pods -n nginx-demo`
-- NGINX page at `http://localhost:8080`
+- NGINX page at `http://localhost:8082`
 - ArgoCD UI at `https://localhost:8081`
 - `kubectl get applications -n argocd`
 
