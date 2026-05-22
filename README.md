@@ -450,35 +450,35 @@ Include screenshots or terminal output for:
 
 ## Screenshot 1: AWS EKS cluster is active
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## Screenshot 2: VPC created for the EKS cluster
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 ## Screenshot 3: Terraform remote state stored in S3
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ## Screenshot 4: DynamoDB table created for Terraform state locking
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ## Screenshot 5: EKS worker node running on EC2
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 ## Screenshot 6: NGINX application accessible through localhost port-forward
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 ## Screenshot 7: ArgoCD application synced and healthy
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 ## Screenshot 8: Terminal verification: EKS node, NGINX pod, and ArgoCD Application
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
  `Screenshots were captured from the AWS Console, browser access endpoints, and kubectl terminal output during assignment execution.`
 
